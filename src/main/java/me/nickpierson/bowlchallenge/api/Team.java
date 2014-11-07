@@ -11,7 +11,6 @@ public class Team {
     }
 
     public Team(String id, String name, Standing overall, Points points) {
-        super();
         this.setId(id);
         this.name = name;
         this.overall = overall;

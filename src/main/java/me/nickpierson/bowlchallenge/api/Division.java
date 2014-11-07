@@ -9,7 +9,6 @@ public class Division {
     }
 
     public Division(List<Conference> conferences) {
-        super();
         this.conferences = conferences;
     }
 

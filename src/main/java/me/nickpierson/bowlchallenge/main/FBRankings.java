@@ -59,12 +59,12 @@ public class FBRankings {
     }
 
     private List<Team> extractTeams(Standings standings) {
-        List<Team> teams = new ArrayList<Team>();
-
         List<Conference> conferences = standings.getDivision().getConferences();
-        conferences.stream().forEach(c -> teams.addAll(c.getTeams()));
-
-        return teams;
+        return conferences
+                .stream()
+                .collect(() -> new ArrayList<Team>(),
+                        (acc, x) -> acc.addAll(x.getTeams()),
+                        (x, y) -> x.addAll(y));
     }
 
     private void printTeams(List<Team> teams) {

@@ -11,7 +11,6 @@ public class Standing {
     }
 
     public Standing(int wins, int losses, int ties, double wpct) {
-        super();
         this.wins = wins;
         this.losses = losses;
         this.ties = ties;
